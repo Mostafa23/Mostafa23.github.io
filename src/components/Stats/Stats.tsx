@@ -16,56 +16,37 @@ const Stats = () => {
   const currentYear = new Date().getFullYear();
   const yearsExperience = currentYear - startYear;
 
-  // Calculate total GitHub stars across all repos
-  // We can fetch this from github API, but since we didn't store stars in the hook yet,
-  // we'll leave it as a placeholder or we can update the hook.
-  // For now, let's use "Core Domains" as 4, or we can use GitHub Stars if we update the hook.
-
   return (
-    <section className="grid grid-cols-2 md:grid-cols-4 gap-4 py-8 border-y border-[var(--color-border)]">
+    <section className="grid grid-cols-1 md:grid-cols-3 gap-8 py-10 border-y border-[var(--color-border)] my-8 bg-[var(--color-surface)]/30 rounded-2xl">
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 0.5 }}
-        className="flex flex-col"
+        className="flex flex-col items-center text-center"
       >
-        <span className="text-3xl font-bold text-[var(--color-text-primary)]">{totalProjects}+</span>
-        <span className="text-sm text-[var(--color-text-secondary)] mt-1">Total Projects</span>
+        <span className="text-4xl md:text-5xl font-extrabold text-blue-500 mb-2">{totalProjects}+</span>
+        <span className="text-sm md:text-base font-medium text-[var(--color-text-secondary)] uppercase tracking-wider">Total Projects</span>
       </motion.div>
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 0.5, delay: 0.1 }}
-        className="flex flex-col"
+        className="flex flex-col items-center text-center"
       >
-        <span className="text-3xl font-bold text-[var(--color-text-primary)]">{techCount}+</span>
-        <span className="text-sm text-[var(--color-text-secondary)] mt-1">Technologies</span>
+        <span className="text-4xl md:text-5xl font-extrabold text-blue-500 mb-2">{techCount}+</span>
+        <span className="text-sm md:text-base font-medium text-[var(--color-text-secondary)] uppercase tracking-wider">Technologies</span>
       </motion.div>
       <motion.div 
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.5 }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="flex flex-col items-start"
+        className="flex flex-col items-center text-center"
       >
-        <img 
-          src="https://komarev.com/ghpvc/?username=Mostafa23&style=flat-square&color=blue&label=VIEWS" 
-          alt="Profile Views" 
-          className="h-8 object-contain mb-1"
-        />
-        <span className="text-sm text-[var(--color-text-secondary)] mt-1">Profile Views</span>
-      </motion.div>
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.5 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-        className="flex flex-col"
-      >
-        <span className="text-3xl font-bold text-[var(--color-text-primary)]">{yearsExperience}</span>
-        <span className="text-sm text-[var(--color-text-secondary)] mt-1">Years Experience</span>
+        <span className="text-4xl md:text-5xl font-extrabold text-blue-500 mb-2">{yearsExperience}</span>
+        <span className="text-sm md:text-base font-medium text-[var(--color-text-secondary)] uppercase tracking-wider">Years Experience</span>
       </motion.div>
     </section>
   );

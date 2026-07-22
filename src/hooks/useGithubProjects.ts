@@ -16,8 +16,14 @@ export const useGithubProjects = () => {
         
         const repos = await response.json();
         
-        // Filter out forks or irrelevant repos if you want (e.g., the portfolio repo itself)
-        const validRepos = repos.filter((repo: any) => !repo.fork && repo.name !== 'Mostafa23.github.io');
+        // Filter out forks, the portfolio repo, and repos without a description
+        const validRepos = repos.filter((repo: any) => 
+          !repo.fork && 
+          repo.name !== 'Mostafa23.github.io' &&
+          repo.name !== 'portfolio-v2' &&
+          repo.description && 
+          repo.description.trim() !== ''
+        );
 
         const githubProjects: Project[] = validRepos.map((repo: any) => {
           // Check if this project already exists in our local data to keep its image
@@ -48,6 +54,9 @@ export const useGithubProjects = () => {
             finalProjects.push(localP);
           }
         });
+
+        // Sort by year descending (newest first)
+        finalProjects.sort((a, b) => b.year - a.year);
 
         setProjects(finalProjects);
       } catch (error) {

@@ -52,12 +52,21 @@ const Hero = () => {
             I am an <strong>AI Engineer & Full-Stack Developer</strong> specializing in Machine Learning, Deep Learning, NLP, and Computer Vision. I build scalable intelligence and the robust web architectures that deliver them.
           </motion.p>
           
-          <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-center gap-4">
-            <a href="#projects" className="flex items-center gap-2 bg-[var(--color-text-primary)] text-[var(--color-background)] px-8 py-3.5 rounded-full font-bold hover:scale-105 transition-transform shadow-lg">
-              View Projects <ArrowRight size={18} />
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-4">
+            <a 
+              href="#contact"
+              className="px-8 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/25 flex items-center gap-2 group"
+            >
+              Get in Touch
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#" className="flex items-center gap-2 bg-[var(--color-surface)] border border-[var(--color-border)] px-8 py-3.5 rounded-full font-bold hover:scale-105 hover:border-gray-500 transition-all shadow-lg">
-              <FileText size={18} /> Download CV
+            <a 
+              href="cv.pdf" 
+              download="Mostafa_CV.pdf"
+              className="px-8 py-3 bg-[var(--color-surface)] text-[var(--color-text-primary)] rounded-full font-medium border border-[var(--color-border)] hover:bg-gray-800 transition-colors flex items-center gap-2"
+            >
+              <FileText className="w-4 h-4" />
+              Download CV
             </a>
           </motion.div>
         </div>
