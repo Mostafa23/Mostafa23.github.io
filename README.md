@@ -1,4 +1,4 @@
-# 🚀 Mostafa Abdallah - AI & ML Engineer Portfolio
+# 🚀 Mostafa Abdallah - Portfolio
 
 ![Portfolio Banner](public/banner.jpg)
 
