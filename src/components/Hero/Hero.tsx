@@ -29,14 +29,15 @@ const Hero = () => {
         {/* Left Column: Text and Buttons */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1 order-2 lg:order-1">
           <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6">
-            Hi, I'm Mostafa <br className="hidden md:block" />
+            Hi, I'm <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-              AI & ML Engineer.
+              Mostafa Abdallah
             </span>
           </motion.h1>
           
-          <motion.p variants={itemVariants} className="text-lg md:text-xl text-[var(--color-text-secondary)] max-w-2xl mb-10 leading-relaxed">
-            I am a recent graduate and passionate <strong>AI & Machine Learning Engineer</strong> specializing in Deep Learning, NLP, and Computer Vision. I focus on transforming data into intelligent, scalable solutions and building robust software architectures.
+          <motion.p variants={itemVariants} className="text-lg md:text-xl text-[var(--color-text-secondary)] max-w-2xl mb-10 leading-relaxed font-medium">
+            AI & Machine Learning Engineer | Computer Vision & Deep Learning Specialist <br className="hidden md:block" />
+            <span className="text-blue-400 font-semibold">Python, PyTorch, MLOps</span>
           </motion.p>
           
           <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">

@@ -67,7 +67,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
           <div className="flex items-center gap-4 pt-2 border-t border-[var(--color-border)]">
             {project.githubUrl && (
               <a href={project.githubUrl} target="_blank" rel="noreferrer" className="flex items-center gap-2 text-sm text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors">
-                <FaGithub size={16} /> Code
+                <FaGithub size={16} /> Open Source
               </a>
             )}
             {project.demoUrl && (
