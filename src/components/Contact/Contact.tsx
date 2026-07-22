@@ -12,11 +12,12 @@ const Contact = () => {
       transition={{ duration: 0.6 }}
       className="space-y-8"
     >
-      <div>
-        <div className="flex items-center gap-3 mb-2">
-          <MessageSquare className="text-blue-400" size={28} />
-          <h2 className="text-3xl font-bold tracking-tight">Get in Touch</h2>
+      <div className="flex flex-col items-center text-center mb-10">
+        <div className="flex items-center gap-3 mb-4">
+          <MessageSquare className="text-blue-500" size={32} />
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight">Get in Touch</h2>
         </div>
+        <div className="w-16 h-1 bg-blue-500 rounded-full mb-6"></div>
         <p className="text-[var(--color-text-secondary)] max-w-2xl text-lg">
           I am actively seeking new opportunities to apply my expertise in Machine Learning and Software Engineering. Let's connect and discuss how we can build something impactful together.
         </p>
