@@ -20,9 +20,9 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   const currentImageUrl = project.imageUrls && project.imageUrls.length > 0 ? project.imageUrls[imgIndex] : undefined;
 
   return (
-    <div className="group flex flex-col bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl overflow-hidden hover:border-gray-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300">
+    <div className="group flex flex-col h-full bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl overflow-hidden hover:border-gray-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300">
       {/* Image Placeholder */}
-      <div className="w-full h-48 bg-gray-900 border-b border-[var(--color-border)] relative overflow-hidden">
+      <div className="w-full h-48 bg-gray-900 border-b border-[var(--color-border)] relative overflow-hidden shrink-0">
         {currentImageUrl ? (
           <img 
             src={currentImageUrl} 
