@@ -27,7 +27,8 @@ export const useGithubProjects = () => {
         // Fetch additional team/contributed repositories
         const additionalRepos = [
           'Aethea-Project/Aethea',
-          'JoeTamer/Ratatouille_3_Micromouse'
+          'JoeTamer/Ratatouille_3_Micromouse',
+          'Tickety-ORG/TicketyProject'
         ];
         
         const additionalResponses = await Promise.all(
