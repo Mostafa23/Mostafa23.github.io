@@ -41,7 +41,7 @@ export const useGithubProjects = () => {
             technologies: existingProject?.technologies || (repo.topics || []).slice(0, 5),
             type: existingProject?.type || 'Personal',
             status: existingProject?.status || 'Completed',
-            year: existingProject?.year || new Date(repo.created_at).getFullYear(),
+            year: new Date(repo.updated_at).getFullYear(),
             updatedAt: repo.updated_at,
             demoUrl: repo.homepage || existingProject?.demoUrl,
             githubUrl: repo.html_url,
