@@ -24,7 +24,7 @@ const Contact = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <a 
-          href="mailto:mostafa@example.com" 
+          href="mailto:tofa201714@gmail.com" 
           className="flex flex-col items-center justify-center p-8 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl hover:border-gray-500 hover:bg-[var(--color-surface-hover)] transition-colors group"
         >
           <Mail size={32} className="mb-4 text-gray-400 group-hover:text-[var(--color-text-primary)] transition-colors" />
@@ -32,7 +32,7 @@ const Contact = () => {
         </a>
 
         <a 
-          href="https://linkedin.com/in/mostafa" 
+          href="https://www.linkedin.com/in/mostafa%D9%90abdallah/" 
           target="_blank" 
           rel="noreferrer"
           className="flex flex-col items-center justify-center p-8 bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl hover:border-gray-500 hover:bg-[var(--color-surface-hover)] transition-colors group"

@@ -26,33 +26,20 @@ const Hero = () => {
     >
       <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-20 w-full">
         
-        {/* Left Column: Image and Badge */}
-        <motion.div variants={itemVariants} className="flex flex-col items-center gap-6 shrink-0">
-          <img 
-            src="https://github.com/Mostafa23.png" 
-            alt="Mostafa Abdallah" 
-            className="w-48 h-48 md:w-64 md:h-64 rounded-full border-4 border-blue-500/20 object-cover shadow-2xl hover:scale-105 transition-transform duration-500"
-          />
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-sm font-medium hover:border-gray-500 transition-colors">
-            <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
-            Available for new opportunities
-          </div>
-        </motion.div>
-
-        {/* Right Column: Text and Buttons */}
-        <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1">
+        {/* Left Column: Text and Buttons */}
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1 order-2 lg:order-1">
           <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6">
-            Building End-to-End <br className="hidden md:block" />
+            Hi, I'm Mostafa <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
-              AI Applications.
+              AI & ML Engineer.
             </span>
           </motion.h1>
           
           <motion.p variants={itemVariants} className="text-lg md:text-xl text-[var(--color-text-secondary)] max-w-2xl mb-10 leading-relaxed">
-            I am an <strong>AI Engineer & Full-Stack Developer</strong> specializing in Machine Learning, Deep Learning, NLP, and Computer Vision. I build scalable intelligence and the robust web architectures that deliver them.
+            I am a recent graduate and passionate <strong>AI & Machine Learning Engineer</strong> specializing in Deep Learning, NLP, and Computer Vision. I focus on transforming data into intelligent, scalable solutions and building robust software architectures.
           </motion.p>
           
-          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-4">
+          <motion.div variants={itemVariants} className="flex flex-wrap gap-4 pt-4 justify-center lg:justify-start">
             <a 
               href="#contact"
               className="px-8 py-3 bg-blue-600 text-white rounded-full font-medium hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/25 flex items-center gap-2 group"
@@ -70,6 +57,19 @@ const Hero = () => {
             </a>
           </motion.div>
         </div>
+
+        {/* Right Column: Image and Badge */}
+        <motion.div variants={itemVariants} className="flex flex-col items-center gap-6 shrink-0 order-1 lg:order-2">
+          <img 
+            src="https://github.com/Mostafa23.png" 
+            alt="Mostafa Abdallah" 
+            className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full border-4 border-blue-500/20 object-cover shadow-2xl hover:scale-105 transition-transform duration-500"
+          />
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[var(--color-surface)] border border-[var(--color-border)] text-sm font-medium hover:border-gray-500 transition-colors">
+            <span className="w-2.5 h-2.5 rounded-full bg-green-500 animate-pulse"></span>
+            Available for new opportunities
+          </div>
+        </motion.div>
 
       </div>
     </motion.section>

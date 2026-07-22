@@ -28,10 +28,10 @@ const About = () => {
           className="text-[var(--color-text-secondary)] leading-relaxed space-y-6 text-lg"
         >
           <p>
-            I'm a Software Engineering student at the Egyptian Chinese University. I have strong experience in C++, Python, Java, and full-stack web development. I am skilled in designing, coding, and deploying scalable applications using modern technologies.
+            I am a Software Engineering student at the Egyptian Chinese University with a solid foundation in Computer Science and hands-on experience in both full-stack development and Artificial Intelligence.
           </p>
           <p>
-            My focus is on problem-solving, data structures, algorithms, and networking fundamentals. I am passionate about continuous learning and contributing to effective software solutions within agile teams.
+            My technical expertise spans across C++, Python, and modern web frameworks, but my true passion lies in building scalable machine learning models and intelligent software architectures. I thrive in environments where I can leverage my strong background in data structures and algorithms to solve complex, real-world problems.
           </p>
         </motion.div>
 
