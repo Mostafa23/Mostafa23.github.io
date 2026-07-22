@@ -50,15 +50,23 @@ export const useGithubProjects = () => {
         const githubProjects: Project[] = allRepos.map((repo: any) => {
           // If the repo doesn't belong to Mostafa23, consider it a Team project
           const isTeamProject = repo.owner.login !== 'Mostafa23';
+
+          // Generate fallback image URLs (Custom Override -> Repo banner.jpg -> Repo banner.png -> OpenGraph)
+          const fallbackUrls = [];
+          if (imageOverrides[repo.name]) {
+            fallbackUrls.push(imageOverrides[repo.name]);
+          }
           
-          // If there's a custom image, use it. Otherwise, use GitHub's automatic OpenGraph image.
-          const finalImage = imageOverrides[repo.name] || `https://opengraph.githubassets.com/1/${repo.owner.login}/${repo.name}`;
+          const defaultBranch = repo.default_branch || 'main';
+          fallbackUrls.push(`https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/${defaultBranch}/assets/banner.jpg`);
+          fallbackUrls.push(`https://raw.githubusercontent.com/${repo.owner.login}/${repo.name}/${defaultBranch}/assets/banner.png`);
+          fallbackUrls.push(`https://opengraph.githubassets.com/1/${repo.owner.login}/${repo.name}`);
           
           return {
             id: repo.name,
             title: repo.name.replace(/-/g, ' '),
             description: repo.description,
-            imageUrl: finalImage,
+            imageUrls: fallbackUrls,
             tags: repo.topics && repo.topics.length > 0 ? repo.topics : ['project'],
             technologies: (repo.topics || []).slice(0, 5),
             type: isTeamProject ? 'Team' : 'Personal',

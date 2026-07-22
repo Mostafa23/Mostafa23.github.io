@@ -1,4 +1,5 @@
 
+import { useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import type { Project } from '../../types';
@@ -8,14 +9,29 @@ interface ProjectCardProps {
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
+  const [imgIndex, setImgIndex] = useState(0);
+  
+  const handleImageError = () => {
+    if (project.imageUrls && imgIndex < project.imageUrls.length - 1) {
+      setImgIndex(prev => prev + 1);
+    }
+  };
+
+  const currentImageUrl = project.imageUrls && project.imageUrls.length > 0 ? project.imageUrls[imgIndex] : undefined;
+
   return (
     <div className="group flex flex-col bg-[var(--color-surface)] border border-[var(--color-border)] rounded-xl overflow-hidden hover:border-gray-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-300">
       {/* Image Placeholder */}
       <div className="w-full h-48 bg-gray-900 border-b border-[var(--color-border)] relative overflow-hidden">
-        {project.imageUrl ? (
-          <img src={project.imageUrl} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+        {currentImageUrl ? (
+          <img 
+            src={currentImageUrl} 
+            alt={project.title} 
+            onError={handleImageError}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" 
+          />
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center text-gray-700">Image Placeholder</div>
+          <div className="absolute inset-0 flex items-center justify-center text-gray-700">No Image Available</div>
         )}
       </div>
 

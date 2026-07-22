@@ -2,7 +2,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  imageUrl?: string;
+  imageUrls: string[];
   tags: string[];
   technologies: string[];
   type: 'Personal' | 'Team';
