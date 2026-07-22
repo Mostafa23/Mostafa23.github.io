@@ -71,17 +71,18 @@ export const useGithubProjects = () => {
             technologies: (repo.topics || []).slice(0, 5),
             type: isTeamProject ? 'Team' : 'Personal',
             status: 'Completed',
-            year: new Date(repo.updated_at).getFullYear(),
+            year: new Date(repo.created_at).getFullYear(),
+            createdAt: repo.created_at,
             updatedAt: repo.updated_at,
             demoUrl: repo.homepage,
             githubUrl: repo.html_url,
           };
         });
 
-        // Sort by last modified date descending (newest first)
+        // Sort by creation date descending (newest projects first)
         githubProjects.sort((a, b) => {
-          const dateA = new Date(a.updatedAt!).getTime();
-          const dateB = new Date(b.updatedAt!).getTime();
+          const dateA = new Date(a.createdAt!).getTime();
+          const dateB = new Date(b.createdAt!).getTime();
           return dateB - dateA;
         });
 
