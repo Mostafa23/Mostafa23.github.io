@@ -17,8 +17,8 @@ const Contact = () => {
           <MessageSquare className="text-blue-400" size={28} />
           <h2 className="text-3xl font-bold tracking-tight">Get in Touch</h2>
         </div>
-        <p className="text-[var(--color-text-secondary)]">
-          I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+        <p className="text-[var(--color-text-secondary)] max-w-2xl text-lg">
+          I am actively seeking new opportunities to apply my expertise in Machine Learning and Software Engineering. Let's connect and discuss how we can build something impactful together.
         </p>
       </div>
 

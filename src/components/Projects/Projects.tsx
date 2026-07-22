@@ -40,7 +40,7 @@ const Projects = () => {
         className="flex flex-col items-center mb-8"
       >
         <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-center mb-4">Projects</h2>
-        <p className="text-[var(--color-text-secondary)] text-center max-w-2xl">Automatically synchronized with my latest GitHub repositories.</p>
+        <p className="text-[var(--color-text-secondary)] text-center max-w-2xl">A selection of my recent open-source work and technical contributions.</p>
         <div className="w-16 h-1 bg-blue-500 mt-6 rounded-full"></div>
       </motion.div>
 

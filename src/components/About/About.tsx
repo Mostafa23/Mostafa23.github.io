@@ -28,7 +28,7 @@ const About = () => {
           className="text-[var(--color-text-secondary)] leading-relaxed space-y-6 text-lg"
         >
           <p>
-            I am a Software Engineering graduate from the Egyptian Chinese University with a strong foundation in Computer Science and hands-on experience in Artificial Intelligence and full-stack development.
+            I'm a Software Engineering graduate from the Egyptian Chinese University with a strong foundation in Computer Science and hands-on experience in Artificial Intelligence and full-stack development.
           </p>
           <p>
             My technical expertise spans across Python, PyTorch, C++, and modern frameworks, with a core focus on building scalable machine learning models, deploying computer vision pipelines, and architecting intelligent software solutions. I thrive in fast-paced environments where I can leverage my deep understanding of data structures and algorithms to solve complex, real-world challenges.
