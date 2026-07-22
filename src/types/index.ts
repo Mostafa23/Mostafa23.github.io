@@ -8,6 +8,7 @@ export interface Project {
   type: 'Personal' | 'Team';
   status: 'Completed' | 'In Progress';
   year: number;
+  updatedAt?: string;
   githubUrl?: string;
   demoUrl?: string;
 }

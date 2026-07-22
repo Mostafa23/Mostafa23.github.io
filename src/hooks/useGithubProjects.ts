@@ -42,6 +42,7 @@ export const useGithubProjects = () => {
             type: existingProject?.type || 'Personal',
             status: existingProject?.status || 'Completed',
             year: existingProject?.year || new Date(repo.created_at).getFullYear(),
+            updatedAt: repo.updated_at,
             demoUrl: repo.homepage || existingProject?.demoUrl,
             githubUrl: repo.html_url,
           };
@@ -55,8 +56,12 @@ export const useGithubProjects = () => {
           }
         });
 
-        // Sort by year descending (newest first)
-        finalProjects.sort((a, b) => b.year - a.year);
+        // Sort by last modified date descending (newest first)
+        finalProjects.sort((a, b) => {
+          const dateA = a.updatedAt ? new Date(a.updatedAt).getTime() : new Date(a.year.toString()).getTime();
+          const dateB = b.updatedAt ? new Date(b.updatedAt).getTime() : new Date(b.year.toString()).getTime();
+          return dateB - dateA;
+        });
 
         setProjects(finalProjects);
       } catch (error) {
