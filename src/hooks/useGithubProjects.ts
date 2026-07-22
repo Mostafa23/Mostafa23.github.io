@@ -13,6 +13,16 @@ export const useGithubProjects = () => {
   useEffect(() => {
     const fetchRepos = async () => {
       try {
+        const cachedData = localStorage.getItem('githubProjectsCache');
+        const cachedTime = localStorage.getItem('githubProjectsTime');
+        const cacheExpiry = 60 * 60 * 1000; // 1 hour
+
+        if (cachedData && cachedTime && (Date.now() - parseInt(cachedTime) < cacheExpiry)) {
+          setProjects(JSON.parse(cachedData));
+          setLoading(false);
+          return;
+        }
+
         const response = await fetch('https://api.github.com/users/Mostafa23/repos?sort=updated&per_page=100');
         if (!response.ok) {
           throw new Error('Failed to fetch from GitHub');
@@ -85,6 +95,10 @@ export const useGithubProjects = () => {
           const dateB = new Date(b.createdAt!).getTime();
           return dateB - dateA;
         });
+
+        // Save to cache
+        localStorage.setItem('githubProjectsCache', JSON.stringify(githubProjects));
+        localStorage.setItem('githubProjectsTime', Date.now().toString());
 
         setProjects(githubProjects);
       } catch (error) {

@@ -6,10 +6,16 @@ import App from './App.tsx'
 // Function to generate a circular favicon dynamically
 const setRoundedFavicon = async (username: string) => {
   try {
-    // Fetch the direct avatar URL which has proper CORS headers
-    const res = await fetch(`https://api.github.com/users/${username}`);
-    const data = await res.json();
-    if (!data.avatar_url) return;
+    let avatarUrl = localStorage.getItem('githubAvatarUrl');
+    
+    if (!avatarUrl) {
+      const res = await fetch(`https://api.github.com/users/${username}`);
+      if (!res.ok) throw new Error("GitHub API limit");
+      const data = await res.json();
+      if (!data.avatar_url) return;
+      avatarUrl = data.avatar_url;
+      localStorage.setItem('githubAvatarUrl', avatarUrl);
+    }
 
     const img = new Image();
     img.crossOrigin = 'Anonymous';
@@ -38,7 +44,7 @@ const setRoundedFavicon = async (username: string) => {
       }
       link.href = canvas.toDataURL("image/png");
     };
-    img.src = data.avatar_url;
+    img.src = avatarUrl;
   } catch (err) {
     console.error("Failed to generate rounded favicon", err);
   }
