@@ -7,7 +7,7 @@ export const useGithubProjects = () => {
 
   // You can easily override the automatic GitHub image by adding the repo name and your custom image URL here.
   const imageOverrides: Record<string, string> = {
-    // 'TicketyProject': 'https://example.com/my-custom-image.png',
+    'portfolio-v2': 'https://Mostafa23.github.io/portfolio-v2/banner.jpg',
   };
 
   useEffect(() => {
@@ -30,11 +30,10 @@ export const useGithubProjects = () => {
         
         const repos = await response.json();
         
-        // Filter out forks, the portfolio repo, and repos without a description
+        // Filter out forks, and repos without a description
         const validRepos = repos.filter((repo: any) => 
           !repo.fork && 
           repo.name !== 'Mostafa23.github.io' &&
-          repo.name !== 'portfolio-v2' &&
           repo.description && 
           repo.description.trim() !== ''
         );
