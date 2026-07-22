@@ -5,6 +5,11 @@ export const useGithubProjects = () => {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
 
+  // You can easily override the automatic GitHub image by adding the repo name and your custom image URL here.
+  const imageOverrides: Record<string, string> = {
+    // 'TicketyProject': 'https://example.com/my-custom-image.png',
+  };
+
   useEffect(() => {
     const fetchRepos = async () => {
       try {
@@ -46,12 +51,14 @@ export const useGithubProjects = () => {
           // If the repo doesn't belong to Mostafa23, consider it a Team project
           const isTeamProject = repo.owner.login !== 'Mostafa23';
           
+          // If there's a custom image, use it. Otherwise, use GitHub's automatic OpenGraph image.
+          const finalImage = imageOverrides[repo.name] || `https://opengraph.githubassets.com/1/${repo.owner.login}/${repo.name}`;
+          
           return {
             id: repo.name,
             title: repo.name.replace(/-/g, ' '),
             description: repo.description,
-            // Automatically generate GitHub OpenGraph Image
-            imageUrl: `https://opengraph.githubassets.com/1/${repo.owner.login}/${repo.name}`,
+            imageUrl: finalImage,
             tags: repo.topics && repo.topics.length > 0 ? repo.topics : ['project'],
             technologies: (repo.topics || []).slice(0, 5),
             type: isTeamProject ? 'Team' : 'Personal',
