@@ -1,6 +1,6 @@
 # 🚀 Mostafa Abdallah - AI & ML Engineer Portfolio
 
-![Portfolio Banner](https://opengraph.githubassets.com/1/Mostafa23/Mostafa23.github.io)
+![Portfolio Banner](public/banner.jpg)
 
 Welcome to my personal portfolio! This repository contains the source code for my portfolio website, built with modern web technologies to showcase my projects, skills, and professional experience in Artificial Intelligence, Machine Learning, and Computer Vision.
 
