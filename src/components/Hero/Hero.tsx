@@ -28,15 +28,16 @@ const Hero = () => {
         
         {/* Left Column: Text and Buttons */}
         <div className="flex flex-col items-center lg:items-start text-center lg:text-left flex-1 order-2 lg:order-1">
-          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6">
-            Hi, I'm <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight mb-6">
+            Hi, I'm <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400 whitespace-nowrap">
               Mostafa Abdallah
             </span>
           </motion.h1>
           
           <motion.p variants={itemVariants} className="text-lg md:text-xl text-[var(--color-text-secondary)] max-w-2xl mb-10 leading-relaxed font-medium">
-            AI & Machine Learning Engineer | Computer Vision & Deep Learning Specialist <br className="hidden md:block" />
+            <span className="block mb-1">AI & Machine Learning Engineer</span>
+            <span className="block mb-1 text-[var(--color-text-primary)]">Computer Vision & Deep Learning Specialist</span>
             <span className="text-blue-400 font-semibold">Python, PyTorch, MLOps</span>
           </motion.p>
           
