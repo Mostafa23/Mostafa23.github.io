@@ -24,16 +24,36 @@ export const useGithubProjects = () => {
           repo.description.trim() !== ''
         );
 
-        const githubProjects: Project[] = validRepos.map((repo: any) => {
+        // Fetch additional team/contributed repositories
+        const additionalRepos = [
+          'Aethea-Project/Aethea',
+          'JoeTamer/Ratatouille_3_Micromouse'
+        ];
+        
+        const additionalResponses = await Promise.all(
+          additionalRepos.map(repo => fetch(`https://api.github.com/repos/${repo}`))
+        );
+        
+        const additionalData = await Promise.all(
+          additionalResponses.filter(res => res.ok).map(res => res.json())
+        );
+
+        // Combine all repos
+        const allRepos = [...validRepos, ...additionalData];
+
+        const githubProjects: Project[] = allRepos.map((repo: any) => {
+          // If the repo doesn't belong to Mostafa23, consider it a Team project
+          const isTeamProject = repo.owner.login !== 'Mostafa23';
+          
           return {
             id: repo.name,
             title: repo.name.replace(/-/g, ' '),
             description: repo.description,
-            // Automatically generate GitHub OpenGraph Image for every project
-            imageUrl: `https://opengraph.githubassets.com/1/Mostafa23/${repo.name}`,
+            // Automatically generate GitHub OpenGraph Image
+            imageUrl: `https://opengraph.githubassets.com/1/${repo.owner.login}/${repo.name}`,
             tags: repo.topics && repo.topics.length > 0 ? repo.topics : ['project'],
             technologies: (repo.topics || []).slice(0, 5),
-            type: 'Personal',
+            type: isTeamProject ? 'Team' : 'Personal',
             status: 'Completed',
             year: new Date(repo.updated_at).getFullYear(),
             updatedAt: repo.updated_at,
