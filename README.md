@@ -1,11 +1,11 @@
 # 🚀 Mostafa Abdallah - AI & ML Engineer Portfolio
 
-![Portfolio Banner](https://opengraph.githubassets.com/1/Mostafa23/portfolio-v2)
+![Portfolio Banner](https://opengraph.githubassets.com/1/Mostafa23/Mostafa23.github.io)
 
 Welcome to my personal portfolio! This repository contains the source code for my portfolio website, built with modern web technologies to showcase my projects, skills, and professional experience in Artificial Intelligence, Machine Learning, and Computer Vision.
 
 ## 🌐 Live Website
-**[Visit my Portfolio](https://Mostafa23.github.io/portfolio-v2/)**
+**[Visit my Portfolio](https://Mostafa23.github.io/)**
 
 ## 🛠️ Tech Stack
 - **Framework:** React + Vite
@@ -24,7 +24,7 @@ Welcome to my personal portfolio! This repository contains the source code for m
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Mostafa23/portfolio-v2.git
+   git clone https://github.com/Mostafa23/Mostafa23.github.io.git
    ```
 2. Install dependencies:
    ```bash
