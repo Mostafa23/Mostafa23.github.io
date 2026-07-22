@@ -1,32 +1,40 @@
-# React + TypeScript + Vite
+# 🚀 Mostafa Abdallah - AI & ML Engineer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+![Portfolio Banner](https://opengraph.githubassets.com/1/Mostafa23/portfolio-v2)
 
-Currently, two official plugins are available:
+Welcome to my personal portfolio! This repository contains the source code for my portfolio website, built with modern web technologies to showcase my projects, skills, and professional experience in Artificial Intelligence, Machine Learning, and Computer Vision.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🌐 Live Website
+**[Visit my Portfolio](https://Mostafa23.github.io/portfolio-v2/)**
 
-## React Compiler
+## 🛠️ Tech Stack
+- **Framework:** React + Vite
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Icons:** Lucide React & React Icons
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
+- **Dynamic GitHub Integration:** Automatically fetches and displays my latest GitHub repositories, filtering forks and specific repositories. It implements client-side caching to prevent API rate limits.
+- **Smart Favicon:** Dynamically generates a rounded favicon from my GitHub avatar using HTML5 Canvas.
+- **Responsive Design:** Fully responsive and optimized for mobile, tablet, and desktop viewing.
+- **Dark Theme:** A sleek and modern dark theme with smooth gradients, animations, and micro-interactions.
 
-## Expanding the Oxlint configuration
+## 🏃‍♂️ Running Locally
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mostafa23/portfolio-v2.git
+   ```
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 📬 Contact
+- **Email:** tofa201714@gmail.com
+- **LinkedIn:** [Mostafa Abdallah](https://www.linkedin.com/in/mostafa%D9%90abdallah/)
