@@ -13,7 +13,7 @@ const setRoundedFavicon = async (username: string) => {
       if (!res.ok) throw new Error("GitHub API limit");
       const data = await res.json();
       if (!data.avatar_url) return;
-      avatarUrl = data.avatar_url;
+      avatarUrl = data.avatar_url as string;
       localStorage.setItem('githubAvatarUrl', avatarUrl);
     }
 
@@ -44,7 +44,9 @@ const setRoundedFavicon = async (username: string) => {
       }
       link.href = canvas.toDataURL("image/png");
     };
-    img.src = avatarUrl;
+    if (avatarUrl) {
+      img.src = avatarUrl;
+    }
   } catch (err) {
     console.error("Failed to generate rounded favicon", err);
   }
