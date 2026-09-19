@@ -59,11 +59,14 @@ const repoMetadataOverrides: Record<string, RepoMetadataOverride> = {
   }
 };
 
+const CACHE_KEY = 'githubProjectsCache_v4';
+const CACHE_TIME_KEY = 'githubProjectsTime_v4';
+
 export const useGithubProjects = () => {
   // Initialize with cached projects or fallback projects so UI renders immediately
   const [projects, setProjects] = useState<Project[]>(() => {
     try {
-      const cached = localStorage.getItem('githubProjectsCache');
+      const cached = localStorage.getItem(CACHE_KEY);
       if (cached) {
         const parsed = JSON.parse(cached);
         if (Array.isArray(parsed) && parsed.length > 0) return parsed;
@@ -79,8 +82,8 @@ export const useGithubProjects = () => {
   useEffect(() => {
     const fetchRepos = async () => {
       try {
-        const cachedData = localStorage.getItem('githubProjectsCache');
-        const cachedTime = localStorage.getItem('githubProjectsTime');
+        const cachedData = localStorage.getItem(CACHE_KEY);
+        const cachedTime = localStorage.getItem(CACHE_TIME_KEY);
         const cacheExpiry = 60 * 60 * 1000; // 1 hour
 
         if (cachedData && cachedTime && (Date.now() - parseInt(cachedTime) < cacheExpiry)) {
@@ -182,8 +185,8 @@ export const useGithubProjects = () => {
 
         // Save to cache
         if (githubProjects.length > 0) {
-          localStorage.setItem('githubProjectsCache', JSON.stringify(githubProjects));
-          localStorage.setItem('githubProjectsTime', Date.now().toString());
+          localStorage.setItem(CACHE_KEY, JSON.stringify(githubProjects));
+          localStorage.setItem(CACHE_TIME_KEY, Date.now().toString());
           setProjects(githubProjects);
         }
       } catch (error) {

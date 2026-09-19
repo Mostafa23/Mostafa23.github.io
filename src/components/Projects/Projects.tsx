@@ -28,7 +28,7 @@ const Projects = () => {
     activeFilter === 'All' ? true : project.tags.includes(activeFilter)
   );
 
-  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 3);
+  const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
 
   return (
     <section id="projects" className="space-y-10">
@@ -89,7 +89,7 @@ const Projects = () => {
                 </AnimatePresence>
               </motion.div>
               
-              {filteredProjects.length > 3 && (
+              {filteredProjects.length > 6 && (
                 <motion.div layout className="flex justify-center mt-8 pt-4">
                   <button
                     onClick={() => setShowAll(!showAll)}
