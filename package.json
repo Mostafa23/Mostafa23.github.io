@@ -10,7 +10,7 @@
     "lint": "oxlint",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b gh-pages -t"
+    "deploy": "gh-pages -d dist -b gh-pages -t -u \"Mostafa Abdallah <tofa201714@gmail.com>\""
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.3",
