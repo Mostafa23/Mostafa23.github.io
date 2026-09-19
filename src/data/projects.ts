@@ -1,0 +1,286 @@
+import type { Project } from '../types';
+
+export const fallbackProjects: Project[] = [
+  {
+    id: 'call-agent',
+    title: 'Voice Arbitrator (Call Agent)',
+    description: 'Autonomous Real-Time Voice Fact-Checking & Epistemic Arbitration Agent for Discord Voice Channels built for the AssemblyAI Hackathon using AssemblyAI Universal-3.5 Pro, Groq LPU, Tavily Search, and FastAPI.',
+    imageUrls: [
+      'https://opengraph.githubassets.com/1/Mostafa23/call-agent'
+    ],
+    tags: ['ai-agents', 'voice-ai', 'assemblyai', 'groq', 'fastapi', 'realtime-audio'],
+    technologies: ['AssemblyAI', 'Groq LPU', 'FastAPI', 'Tavily', 'Edge-TTS', 'Python'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-09-19T20:41:40Z',
+    updatedAt: '2026-09-19T23:30:00Z',
+    githubUrl: 'https://github.com/Mostafa23/call-agent',
+  },
+  {
+    id: 'Multi-Agent-Procurement-Assistant-using-CrewAI',
+    title: 'Multi Agent Procurement Assistant',
+    description: 'An intelligent Multi-Agent Procurement Assistant built with CrewAI, ScrapeGraphAI, Tavily, and FastAPI to automate product research, pricing evaluation, and HTML reporting.',
+    imageUrls: [
+      'https://raw.githubusercontent.com/Mostafa23/Multi-Agent-Procurement-Assistant-using-CrewAI/main/assets/banner.jpg',
+      'https://opengraph.githubassets.com/1/Mostafa23/Multi-Agent-Procurement-Assistant-using-CrewAI'
+    ],
+    tags: ['ai-agents', 'crewai', 'fastapi', 'llm', 'multi-agent', 'scrapegraphai'],
+    technologies: ['CrewAI', 'FastAPI', 'ScrapeGraphAI', 'Tavily', 'Python'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-07-29T10:00:00Z',
+    updatedAt: '2026-09-02T12:00:00Z',
+    githubUrl: 'https://github.com/Mostafa23/Multi-Agent-Procurement-Assistant-using-CrewAI',
+  },
+  {
+    id: 'Realistic-Human-Face-Generation-GAN',
+    title: 'Realistic Human Face Generation GAN',
+    description: 'PyTorch implementation & comparative study of realistic 64x64 human face generation using DCGAN and WGAN-GP on CelebA & FFHQ datasets.',
+    imageUrls: [
+      'https://raw.githubusercontent.com/Mostafa23/Realistic-Human-Face-Generation-GAN/main/assets/banner.jpg',
+      'https://opengraph.githubassets.com/1/Mostafa23/Realistic-Human-Face-Generation-GAN'
+    ],
+    tags: ['computer-vision', 'deep-learning', 'gan', 'pytorch', 'face-generation', 'celeba'],
+    technologies: ['PyTorch', 'DCGAN', 'WGAN-GP', 'Computer Vision', 'Deep Learning'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-07-30T10:00:00Z',
+    updatedAt: '2026-08-01T12:00:00Z',
+    githubUrl: 'https://github.com/Mostafa23/Realistic-Human-Face-Generation-GAN',
+  },
+  {
+    id: 'Enterprise-Agentic-Corrective-RAG',
+    title: 'Enterprise Agentic Corrective RAG',
+    description: 'An Enterprise-Grade Modular RAG Platform implementing Standard RAG, Corrective RAG (CRAG with Query Rewriting & Evaluation), and Agentic RAG (AI Planner, ReAct, Tools & Reflection) across PDF, DOCX, CSV, and TXT materials.',
+    imageUrls: [
+      'https://raw.githubusercontent.com/Mostafa23/Enterprise-Agentic-Corrective-RAG/main/assets/banner.jpg',
+      'https://opengraph.githubassets.com/1/Mostafa23/Enterprise-Agentic-Corrective-RAG'
+    ],
+    tags: ['agentic-rag', 'rag', 'langchain', 'chromadb', 'groq', 'vector-database'],
+    technologies: ['LangChain', 'ChromaDB', 'Groq', 'Streamlit', 'BM25', 'Python'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-07-29T08:00:00Z',
+    updatedAt: '2026-07-30T12:00:00Z',
+    githubUrl: 'https://github.com/Mostafa23/Enterprise-Agentic-Corrective-RAG',
+  },
+  {
+    id: 'Named-Entity-Recognition-System',
+    title: 'Named Entity Recognition System',
+    description: 'A Deep Learning Natural Language Processing (NLP) project for Named Entity Recognition (NER). It compares traditional RNN architectures (LSTM, BiLSTM-CRF) with a fine-tuned RoBERTa Transformer to extract and classify entities from text, complete with a Gradio web interface.',
+    imageUrls: [
+      'https://raw.githubusercontent.com/Mostafa23/Named-Entity-Recognition-System/main/assets/banner.jpg',
+      'https://opengraph.githubassets.com/1/Mostafa23/Named-Entity-Recognition-System'
+    ],
+    tags: ['nlp', 'transformers', 'roberta', 'pytorch', 'ner', 'deep-learning'],
+    technologies: ['RoBERTa', 'PyTorch', 'BiLSTM-CRF', 'HuggingFace', 'Gradio'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-07-21T10:00:00Z',
+    updatedAt: '2026-07-30T12:00:00Z',
+    githubUrl: 'https://github.com/Mostafa23/Named-Entity-Recognition-System',
+  },
+  {
+    id: 'Emotion-Classification-System',
+    title: 'Emotion Classification System',
+    description: 'An end-to-end Deep Learning NLP pipeline and interactive Streamlit dashboard for classifying text into Ekman emotions. Features comparative analysis between modern Transformers (RoBERTa, DistilBERT) and Sequence models (BiLSTM, GRU) built with PyTorch.',
+    imageUrls: [
+      'https://raw.githubusercontent.com/Mostafa23/Emotion-Classification-System/main/assets/banner.jpg',
+      'https://opengraph.githubassets.com/1/Mostafa23/Emotion-Classification-System'
+    ],
+    tags: ['nlp', 'emotion-classification', 'transformers', 'roberta', 'streamlit', 'pytorch'],
+    technologies: ['RoBERTa', 'DistilBERT', 'BiLSTM', 'Streamlit', 'PyTorch'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-07-22T10:00:00Z',
+    updatedAt: '2026-07-26T12:00:00Z',
+    githubUrl: 'https://github.com/Mostafa23/Emotion-Classification-System',
+  },
+  {
+    id: 'AI-Cheating-Detection-System',
+    title: 'AI Cheating Detection System',
+    description: 'A real-time AI desktop application that monitors students during exams, detects cheating behaviors using YOLO26, and uploads automated evidence to Firebase.',
+    imageUrls: [
+      'https://raw.githubusercontent.com/Mostafa23/AI-Cheating-Detection-System/main/assets/banner.jpg',
+      'https://opengraph.githubassets.com/1/Mostafa23/AI-Cheating-Detection-System'
+    ],
+    tags: ['computer-vision', 'yolo', 'opencv', 'firebase', 'customtkinter', 'ai-proctoring'],
+    technologies: ['YOLO', 'OpenCV', 'Firebase', 'CustomTkinter', 'Python'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-07-16T08:11:10Z',
+    updatedAt: '2026-07-21T04:28:25Z',
+    githubUrl: 'https://github.com/Mostafa23/AI-Cheating-Detection-System',
+  },
+  {
+    id: 'Consumer-Complaint-Classification',
+    title: 'Consumer Complaint Classification',
+    description: 'An end-to-end NLP pipeline for classifying raw consumer financial complaints using a fine-tuned RoBERTa-base model. Features Mixed Precision (FP16), dynamic class weighting, and interactive data visualizations.',
+    imageUrls: [
+      'https://raw.githubusercontent.com/Mostafa23/Consumer-Complaint-Classification/main/assets/banner.jpg',
+      'https://opengraph.githubassets.com/1/Mostafa23/Consumer-Complaint-Classification'
+    ],
+    tags: ['nlp', 'text-classification', 'transformers', 'roberta', 'pytorch'],
+    technologies: ['RoBERTa', 'PyTorch', 'Hugging Face', 'Data Science'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-07-21T00:47:40Z',
+    updatedAt: '2026-07-21T01:44:30Z',
+    githubUrl: 'https://github.com/Mostafa23/Consumer-Complaint-Classification',
+  },
+  {
+    id: 'Road-Damage-Detection',
+    title: 'Road Damage Detection',
+    description: 'Deep Learning & Computer Vision pipeline for Road Damage Detection. Evaluates YOLOv8, YOLO11, and YOLO26 architectures to achieve real-time, high-accuracy pavement defect identification with an interactive Gradio web interface.',
+    imageUrls: [
+      'https://raw.githubusercontent.com/Mostafa23/Road-Damage-Detection/main/assets/banner.jpg',
+      'https://opengraph.githubassets.com/1/Mostafa23/Road-Damage-Detection'
+    ],
+    tags: ['computer-vision', 'object-detection', 'yolo', 'pytorch', 'deep-learning'],
+    technologies: ['YOLOv8', 'YOLO11', 'PyTorch', 'Gradio', 'Python'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-07-16T12:32:45Z',
+    updatedAt: '2026-07-16T12:38:11Z',
+    githubUrl: 'https://github.com/Mostafa23/Road-Damage-Detection',
+  },
+  {
+    id: 'Oral-Diseases-Classification-System',
+    title: 'Oral Diseases Classification System',
+    description: 'A Deep Learning-based Oral Diseases Classification System comparing a Custom CNN built from scratch against state-of-the-art Transfer Learning models (ResNet50, DenseNet121, EfficientNetB0). Built with TensorFlow and deployed via Gradio.',
+    imageUrls: [
+      'https://raw.githubusercontent.com/Mostafa23/Oral-Diseases-Classification-System/main/assets/banner.jpg',
+      'https://opengraph.githubassets.com/1/Mostafa23/Oral-Diseases-Classification-System'
+    ],
+    tags: ['medical-imaging', 'computer-vision', 'cnn', 'tensorflow', 'deep-learning'],
+    technologies: ['TensorFlow', 'Keras', 'ResNet50', 'DenseNet121', 'Gradio'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-07-14T08:47:28Z',
+    updatedAt: '2026-07-16T12:12:18Z',
+    githubUrl: 'https://github.com/Mostafa23/Oral-Diseases-Classification-System',
+  },
+  {
+    id: 'pricepulse-airbnb-project',
+    title: 'PricePulse Airbnb Data Warehouse',
+    description: 'A Data Engineering & Analytics project that scrapes Airbnb listings across 10 European cities, builds a robust MySQL Data Warehouse using the Medallion Architecture (Bronze -> Silver -> Gold), and visualizes hospitality market insights through an interactive Power BI dashboard.',
+    imageUrls: [
+      'https://raw.githubusercontent.com/Mostafa23/pricepulse-airbnb-project/main/assets/banner.jpg',
+      'https://opengraph.githubassets.com/1/Mostafa23/pricepulse-airbnb-project'
+    ],
+    tags: ['data-engineering', 'etl', 'mysql', 'powerbi', 'python', 'analytics'],
+    technologies: ['MySQL', 'Power BI', 'Selenium', 'ETL', 'Python'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-07-09T12:29:33Z',
+    updatedAt: '2026-07-09T12:59:17Z',
+    githubUrl: 'https://github.com/Mostafa23/pricepulse-airbnb-project',
+  },
+  {
+    id: 'Smart-Home-Energy-Forecaster',
+    title: 'Smart Home & Weather Energy Forecaster',
+    description: 'An end-to-end Deep Learning pipeline integrating Smart Home Energy Consumption and Weather Type Classification. Builds 1D CNN models with CodeCarbon tracking, FLOPs analysis, and Keras.',
+    imageUrls: [
+      'https://opengraph.githubassets.com/1/Mostafa23/Smart-Home-Energy-Forecaster'
+    ],
+    tags: ['deep-learning', 'cnn', 'time-series', 'tensorflow', 'green-ai'],
+    technologies: ['1D-CNN', 'TensorFlow', 'Keras', 'CodeCarbon', 'Python'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-05-10T17:24:28Z',
+    updatedAt: '2026-05-10T17:54:05Z',
+    githubUrl: 'https://github.com/Mostafa23/Smart-Home-Energy-Forecaster',
+  },
+  {
+    id: 'ClipFast-Simple-FFmpeg-Video-Cutter',
+    title: 'ClipFast Lossless FFmpeg Video Cutter',
+    description: 'A lightweight, ultra-fast desktop application built with Python and PySide6 for lossless video cutting powered by FFmpeg with drag-and-drop support.',
+    imageUrls: [
+      'https://opengraph.githubassets.com/1/Mostafa23/ClipFast-Simple-FFmpeg-Video-Cutter'
+    ],
+    tags: ['desktop-app', 'pyside6', 'ffmpeg', 'python', 'video-processing'],
+    technologies: ['Python', 'PySide6', 'FFmpeg', 'GUI'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2025,
+    createdAt: '2025-11-10T01:26:00Z',
+    updatedAt: '2025-11-10T01:33:28Z',
+    githubUrl: 'https://github.com/Mostafa23/ClipFast-Simple-FFmpeg-Video-Cutter',
+  },
+  {
+    id: 'Simple-Distributed-Notification-System',
+    title: 'Real-time Notification & Chat System',
+    description: 'A real-time WebSocket-based distributed communication system built using FastAPI backend and interactive frontend dashboard for live messaging and subscriber tracking.',
+    imageUrls: [
+      'https://opengraph.githubassets.com/1/Mostafa23/Simple-Distributed-Notification-System'
+    ],
+    tags: ['fastapi', 'websockets', 'realtime', 'python', 'distributed-systems'],
+    technologies: ['FastAPI', 'WebSockets', 'Python', 'JavaScript'],
+    type: 'Personal',
+    status: 'Completed',
+    year: 2025,
+    createdAt: '2025-04-17T04:37:44Z',
+    updatedAt: '2025-08-04T20:21:38Z',
+    githubUrl: 'https://github.com/Mostafa23/Simple-Distributed-Notification-System',
+  },
+  {
+    id: 'Aethea',
+    title: 'Aethea Project',
+    description: 'Collaborative open-source software engineering and architecture project developed in an agile team environment.',
+    imageUrls: [
+      'https://opengraph.githubassets.com/1/Aethea-Project/Aethea'
+    ],
+    tags: ['team', 'open-source', 'software-engineering'],
+    technologies: ['Software Engineering', 'Team Project'],
+    type: 'Team',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-06-01T00:00:00Z',
+    updatedAt: '2026-07-01T00:00:00Z',
+    githubUrl: 'https://github.com/Aethea-Project/Aethea',
+  },
+  {
+    id: 'Ratatouille_3_Micromouse',
+    title: 'Ratatouille 3 Micromouse Robot',
+    description: "Remi 3 — micromouse autonomous maze robot that won 2nd place at IEEE Mansoura's Victories 4 micromouse competition. Includes PCB schematics, fabrication files, CAD models, and firmware.",
+    imageUrls: [
+      'https://opengraph.githubassets.com/1/yousseftamer-eng/Ratatouille_3_Micromouse'
+    ],
+    tags: ['robotics', 'embedded', 'hardware', 'c', 'ieee'],
+    technologies: ['C', 'Robotics', 'PCB Design', 'CAD', 'Firmware'],
+    type: 'Team',
+    status: 'Completed',
+    year: 2026,
+    createdAt: '2026-06-28T10:12:16Z',
+    updatedAt: '2026-07-01T17:58:39Z',
+    githubUrl: 'https://github.com/yousseftamer-eng/Ratatouille_3_Micromouse',
+  },
+  {
+    id: 'TicketyProject',
+    title: 'Tickety Project',
+    description: 'Full-stack enterprise event ticketing, booking and management web application built by a high-performing collaborative team.',
+    imageUrls: [
+      'https://opengraph.githubassets.com/1/Tickety-ORG/TicketyProject'
+    ],
+    tags: ['fullstack', 'team', 'ticket-management', 'web-app'],
+    technologies: ['React', 'Node.js', 'Team Project'],
+    type: 'Team',
+    status: 'Completed',
+    year: 2024,
+    createdAt: '2024-10-31T18:48:17Z',
+    updatedAt: '2024-12-24T02:27:58Z',
+    githubUrl: 'https://github.com/Tickety-ORG/TicketyProject',
+  }
+];

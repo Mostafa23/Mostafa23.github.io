@@ -5,7 +5,7 @@ const skillsData = [
   {
     title: 'AI & Deep Learning',
     icon: BrainCircuit,
-    items: ['PyTorch', 'TensorFlow', 'Transformers', 'Hugging Face', 'Scikit-learn', 'OpenCV', 'YOLO', 'NLTK', 'Spacy']
+    items: ['PyTorch', 'TensorFlow', 'Transformers', 'CrewAI', 'LangChain', 'RAG', 'GANs', 'YOLO', 'OpenCV', 'Hugging Face']
   },
   {
     title: 'Languages',
@@ -20,17 +20,17 @@ const skillsData = [
   {
     title: 'Backend & APIs',
     icon: Server,
-    items: ['FastAPI', 'Node.js', 'MongoDB', 'REST APIs']
+    items: ['FastAPI', 'Node.js', 'MongoDB', 'WebSockets', 'REST APIs']
   },
   {
     title: 'Data Science',
     icon: Database,
-    items: ['Pandas', 'NumPy', 'Data Visualization', 'Time Series']
+    items: ['Pandas', 'NumPy', 'Data Visualization', 'Time Series', 'ETL']
   },
   {
     title: 'Systems & Tools',
     icon: Wrench,
-    items: ['Git/GitHub', 'Docker', 'Postman', 'VS Code', 'Arduino', 'CCNA']
+    items: ['Git/GitHub', 'Docker', 'Postman', 'VS Code', 'PySide6', 'FFmpeg', 'Arduino']
   }
 ];
 
