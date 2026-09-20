@@ -181,10 +181,10 @@ export const useGithubProjects = () => {
           const defaultBranch = repo.default_branch || 'main';
           const ownerLogin = repo.owner?.login || 'Mostafa23';
           
-          // Try common banner locations across repositories
-          fallbackUrls.push(`https://raw.githubusercontent.com/${ownerLogin}/${repo.name}/${defaultBranch}/frontend/public/banner.jpg`);
+          // Try common banner locations across repositories (assets/banner.jpg is the primary standard)
           fallbackUrls.push(`https://raw.githubusercontent.com/${ownerLogin}/${repo.name}/${defaultBranch}/assets/banner.jpg`);
           fallbackUrls.push(`https://raw.githubusercontent.com/${ownerLogin}/${repo.name}/${defaultBranch}/assets/banner.png`);
+          fallbackUrls.push(`https://raw.githubusercontent.com/${ownerLogin}/${repo.name}/${defaultBranch}/frontend/public/banner.jpg`);
           fallbackUrls.push(`https://raw.githubusercontent.com/${ownerLogin}/${repo.name}/${defaultBranch}/assets/screenshot.jpg`);
           fallbackUrls.push(`https://raw.githubusercontent.com/${ownerLogin}/${repo.name}/${defaultBranch}/images/results_chart.png`);
           fallbackUrls.push(`https://raw.githubusercontent.com/${ownerLogin}/${repo.name}/${defaultBranch}/images/page1.png`);
