@@ -6,6 +6,7 @@ export const fallbackProjects: Project[] = [
     title: 'Voice Arbitrator (Call Agent)',
     description: 'Autonomous Real-Time Voice Fact-Checking & Epistemic Arbitration Agent for Discord Voice Channels built for the AssemblyAI Hackathon using AssemblyAI Universal-3.5 Pro, Groq LPU, Tavily Search, and FastAPI.',
     imageUrls: [
+      'https://raw.githubusercontent.com/Mostafa23/call-agent/main/assets/banner.jpg',
       'https://raw.githubusercontent.com/Mostafa23/call-agent/main/frontend/public/banner.jpg',
       'https://opengraph.githubassets.com/1/Mostafa23/call-agent'
     ],

@@ -18,7 +18,7 @@ const repoMetadataOverrides: Record<string, RepoMetadataOverride> = {
     description: 'Autonomous Real-Time Voice Fact-Checking & Epistemic Arbitration Agent for Discord Voice Channels built for the AssemblyAI Hackathon using AssemblyAI Universal-3.5 Pro, Groq LPU, Tavily Search, and FastAPI.',
     tags: ['ai-agents', 'voice-ai', 'assemblyai', 'groq', 'fastapi', 'realtime-audio'],
     technologies: ['AssemblyAI', 'Groq LPU', 'FastAPI', 'Tavily', 'Edge-TTS', 'Python'],
-    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/call-agent/main/frontend/public/banner.jpg'
+    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/call-agent/main/assets/banner.jpg'
   },
   'Multi-Agent-Procurement-Assistant-using-CrewAI': {
     imageUrl: 'https://raw.githubusercontent.com/Mostafa23/Multi-Agent-Procurement-Assistant-using-CrewAI/master/assets/banner.jpg'
@@ -89,8 +89,8 @@ const repoMetadataOverrides: Record<string, RepoMetadataOverride> = {
   }
 };
 
-const CACHE_KEY = 'githubProjectsCache_v5';
-const CACHE_TIME_KEY = 'githubProjectsTime_v5';
+const CACHE_KEY = 'githubProjectsCache_v6';
+const CACHE_TIME_KEY = 'githubProjectsTime_v6';
 
 export const useGithubProjects = () => {
   // Initialize with cached projects or fallback projects so UI renders immediately
