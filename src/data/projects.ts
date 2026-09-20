@@ -6,6 +6,7 @@ export const fallbackProjects: Project[] = [
     title: 'Voice Arbitrator (Call Agent)',
     description: 'Autonomous Real-Time Voice Fact-Checking & Epistemic Arbitration Agent for Discord Voice Channels built for the AssemblyAI Hackathon using AssemblyAI Universal-3.5 Pro, Groq LPU, Tavily Search, and FastAPI.',
     imageUrls: [
+      'https://raw.githubusercontent.com/Mostafa23/call-agent/main/frontend/public/banner.jpg',
       'https://opengraph.githubassets.com/1/Mostafa23/call-agent'
     ],
     tags: ['ai-agents', 'voice-ai', 'assemblyai', 'groq', 'fastapi', 'realtime-audio'],
@@ -22,7 +23,7 @@ export const fallbackProjects: Project[] = [
     title: 'Multi Agent Procurement Assistant',
     description: 'An intelligent Multi-Agent Procurement Assistant built with CrewAI, ScrapeGraphAI, Tavily, and FastAPI to automate product research, pricing evaluation, and HTML reporting.',
     imageUrls: [
-      'https://raw.githubusercontent.com/Mostafa23/Multi-Agent-Procurement-Assistant-using-CrewAI/main/assets/banner.jpg',
+      'https://raw.githubusercontent.com/Mostafa23/Multi-Agent-Procurement-Assistant-using-CrewAI/master/assets/banner.jpg',
       'https://opengraph.githubassets.com/1/Mostafa23/Multi-Agent-Procurement-Assistant-using-CrewAI'
     ],
     tags: ['ai-agents', 'crewai', 'fastapi', 'llm', 'multi-agent', 'scrapegraphai'],
@@ -39,7 +40,7 @@ export const fallbackProjects: Project[] = [
     title: 'Realistic Human Face Generation GAN',
     description: 'PyTorch implementation & comparative study of realistic 64x64 human face generation using DCGAN and WGAN-GP on CelebA & FFHQ datasets.',
     imageUrls: [
-      'https://raw.githubusercontent.com/Mostafa23/Realistic-Human-Face-Generation-GAN/main/assets/banner.jpg',
+      'https://raw.githubusercontent.com/Mostafa23/Realistic-Human-Face-Generation-GAN/main/assets/banner.png',
       'https://opengraph.githubassets.com/1/Mostafa23/Realistic-Human-Face-Generation-GAN'
     ],
     tags: ['computer-vision', 'deep-learning', 'gan', 'pytorch', 'face-generation', 'celeba'],
@@ -56,7 +57,7 @@ export const fallbackProjects: Project[] = [
     title: 'Enterprise Agentic Corrective RAG',
     description: 'An Enterprise-Grade Modular RAG Platform implementing Standard RAG, Corrective RAG (CRAG with Query Rewriting & Evaluation), and Agentic RAG (AI Planner, ReAct, Tools & Reflection) across PDF, DOCX, CSV, and TXT materials.',
     imageUrls: [
-      'https://raw.githubusercontent.com/Mostafa23/Enterprise-Agentic-Corrective-RAG/main/assets/banner.jpg',
+      'https://raw.githubusercontent.com/Mostafa23/Enterprise-Agentic-Corrective-RAG/master/assets/banner.jpg',
       'https://opengraph.githubassets.com/1/Mostafa23/Enterprise-Agentic-Corrective-RAG'
     ],
     tags: ['agentic-rag', 'rag', 'langchain', 'chromadb', 'groq', 'vector-database'],
@@ -73,7 +74,7 @@ export const fallbackProjects: Project[] = [
     title: 'Named Entity Recognition System',
     description: 'A Deep Learning Natural Language Processing (NLP) project for Named Entity Recognition (NER). It compares traditional RNN architectures (LSTM, BiLSTM-CRF) with a fine-tuned RoBERTa Transformer to extract and classify entities from text, complete with a Gradio web interface.',
     imageUrls: [
-      'https://raw.githubusercontent.com/Mostafa23/Named-Entity-Recognition-System/main/assets/banner.jpg',
+      'https://raw.githubusercontent.com/Mostafa23/Named-Entity-Recognition-System/main/assets/banner.png',
       'https://opengraph.githubassets.com/1/Mostafa23/Named-Entity-Recognition-System'
     ],
     tags: ['nlp', 'transformers', 'roberta', 'pytorch', 'ner', 'deep-learning'],
@@ -107,7 +108,7 @@ export const fallbackProjects: Project[] = [
     title: 'AI Cheating Detection System',
     description: 'A real-time AI desktop application that monitors students during exams, detects cheating behaviors using YOLO26, and uploads automated evidence to Firebase.',
     imageUrls: [
-      'https://raw.githubusercontent.com/Mostafa23/AI-Cheating-Detection-System/main/assets/banner.jpg',
+      'https://raw.githubusercontent.com/Mostafa23/AI-Cheating-Detection-System/main/assets/screenshot.jpg',
       'https://opengraph.githubassets.com/1/Mostafa23/AI-Cheating-Detection-System'
     ],
     tags: ['computer-vision', 'yolo', 'opencv', 'firebase', 'customtkinter', 'ai-proctoring'],
@@ -124,7 +125,7 @@ export const fallbackProjects: Project[] = [
     title: 'Consumer Complaint Classification',
     description: 'An end-to-end NLP pipeline for classifying raw consumer financial complaints using a fine-tuned RoBERTa-base model. Features Mixed Precision (FP16), dynamic class weighting, and interactive data visualizations.',
     imageUrls: [
-      'https://raw.githubusercontent.com/Mostafa23/Consumer-Complaint-Classification/main/assets/banner.jpg',
+      'https://raw.githubusercontent.com/Mostafa23/Consumer-Complaint-Classification/main/assets/banner.png',
       'https://opengraph.githubassets.com/1/Mostafa23/Consumer-Complaint-Classification'
     ],
     tags: ['nlp', 'text-classification', 'transformers', 'roberta', 'pytorch'],
@@ -141,7 +142,7 @@ export const fallbackProjects: Project[] = [
     title: 'Road Damage Detection',
     description: 'Deep Learning & Computer Vision pipeline for Road Damage Detection. Evaluates YOLOv8, YOLO11, and YOLO26 architectures to achieve real-time, high-accuracy pavement defect identification with an interactive Gradio web interface.',
     imageUrls: [
-      'https://raw.githubusercontent.com/Mostafa23/Road-Damage-Detection/main/assets/banner.jpg',
+      'https://raw.githubusercontent.com/Mostafa23/Road-Damage-Detection/main/assets/detection_sample.jpg',
       'https://opengraph.githubassets.com/1/Mostafa23/Road-Damage-Detection'
     ],
     tags: ['computer-vision', 'object-detection', 'yolo', 'pytorch', 'deep-learning'],
@@ -158,7 +159,7 @@ export const fallbackProjects: Project[] = [
     title: 'Oral Diseases Classification System',
     description: 'A Deep Learning-based Oral Diseases Classification System comparing a Custom CNN built from scratch against state-of-the-art Transfer Learning models (ResNet50, DenseNet121, EfficientNetB0). Built with TensorFlow and deployed via Gradio.',
     imageUrls: [
-      'https://raw.githubusercontent.com/Mostafa23/Oral-Diseases-Classification-System/main/assets/banner.jpg',
+      'https://raw.githubusercontent.com/Mostafa23/Oral-Diseases-Classification-System/main/images/results_chart.png',
       'https://opengraph.githubassets.com/1/Mostafa23/Oral-Diseases-Classification-System'
     ],
     tags: ['medical-imaging', 'computer-vision', 'cnn', 'tensorflow', 'deep-learning'],
@@ -175,7 +176,7 @@ export const fallbackProjects: Project[] = [
     title: 'PricePulse Airbnb Data Warehouse',
     description: 'A Data Engineering & Analytics project that scrapes Airbnb listings across 10 European cities, builds a robust MySQL Data Warehouse using the Medallion Architecture (Bronze -> Silver -> Gold), and visualizes hospitality market insights through an interactive Power BI dashboard.',
     imageUrls: [
-      'https://raw.githubusercontent.com/Mostafa23/pricepulse-airbnb-project/main/assets/banner.jpg',
+      'https://raw.githubusercontent.com/Mostafa23/pricepulse-airbnb-project/main/images/page1.png',
       'https://opengraph.githubassets.com/1/Mostafa23/pricepulse-airbnb-project'
     ],
     tags: ['data-engineering', 'etl', 'mysql', 'powerbi', 'python', 'analytics'],
@@ -224,6 +225,7 @@ export const fallbackProjects: Project[] = [
     title: 'Real-time Notification & Chat System',
     description: 'A real-time WebSocket-based distributed communication system built using FastAPI backend and interactive frontend dashboard for live messaging and subscriber tracking.',
     imageUrls: [
+      'https://raw.githubusercontent.com/Mostafa23/Simple-Distributed-Notification-System/main/pages/images/Server%20Background.png',
       'https://opengraph.githubassets.com/1/Mostafa23/Simple-Distributed-Notification-System'
     ],
     tags: ['fastapi', 'websockets', 'realtime', 'python', 'distributed-systems'],

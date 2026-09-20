@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import type { Project } from '../types';
 import { fallbackProjects } from '../data/projects';
 
-// Metadata overrides for repositories that may lack description/topics on GitHub or need custom titles
+// Metadata overrides for repositories that may lack description/topics on GitHub or need custom titles/images
 interface RepoMetadataOverride {
   title?: string;
   description?: string;
@@ -18,7 +18,37 @@ const repoMetadataOverrides: Record<string, RepoMetadataOverride> = {
     description: 'Autonomous Real-Time Voice Fact-Checking & Epistemic Arbitration Agent for Discord Voice Channels built for the AssemblyAI Hackathon using AssemblyAI Universal-3.5 Pro, Groq LPU, Tavily Search, and FastAPI.',
     tags: ['ai-agents', 'voice-ai', 'assemblyai', 'groq', 'fastapi', 'realtime-audio'],
     technologies: ['AssemblyAI', 'Groq LPU', 'FastAPI', 'Tavily', 'Edge-TTS', 'Python'],
-    imageUrl: 'https://opengraph.githubassets.com/1/Mostafa23/call-agent'
+    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/call-agent/main/frontend/public/banner.jpg'
+  },
+  'Multi-Agent-Procurement-Assistant-using-CrewAI': {
+    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/Multi-Agent-Procurement-Assistant-using-CrewAI/master/assets/banner.jpg'
+  },
+  'Realistic-Human-Face-Generation-GAN': {
+    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/Realistic-Human-Face-Generation-GAN/main/assets/banner.png'
+  },
+  'Enterprise-Agentic-Corrective-RAG': {
+    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/Enterprise-Agentic-Corrective-RAG/master/assets/banner.jpg'
+  },
+  'Named-Entity-Recognition-System': {
+    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/Named-Entity-Recognition-System/main/assets/banner.png'
+  },
+  'Emotion-Classification-System': {
+    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/Emotion-Classification-System/main/assets/banner.jpg'
+  },
+  'AI-Cheating-Detection-System': {
+    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/AI-Cheating-Detection-System/main/assets/screenshot.jpg'
+  },
+  'Consumer-Complaint-Classification': {
+    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/Consumer-Complaint-Classification/main/assets/banner.png'
+  },
+  'Road-Damage-Detection': {
+    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/Road-Damage-Detection/main/assets/detection_sample.jpg'
+  },
+  'Oral-Diseases-Classification-System': {
+    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/Oral-Diseases-Classification-System/main/images/results_chart.png'
+  },
+  'pricepulse-airbnb-project': {
+    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/pricepulse-airbnb-project/main/images/page1.png'
   },
   'Smart-Home-Energy-Forecaster': {
     title: 'Smart Home & Weather Energy Forecaster',
@@ -39,7 +69,7 @@ const repoMetadataOverrides: Record<string, RepoMetadataOverride> = {
     description: 'A real-time WebSocket-based distributed communication system built using FastAPI backend and interactive frontend dashboard for live messaging and subscriber tracking.',
     tags: ['fastapi', 'websockets', 'realtime', 'python', 'distributed-systems'],
     technologies: ['FastAPI', 'WebSockets', 'Python', 'JavaScript'],
-    imageUrl: 'https://opengraph.githubassets.com/1/Mostafa23/Simple-Distributed-Notification-System'
+    imageUrl: 'https://raw.githubusercontent.com/Mostafa23/Simple-Distributed-Notification-System/main/pages/images/Server%20Background.png'
   },
   'AI-Maze-Search-Algoritms': {
     title: 'AI Maze Search Algorithms',
@@ -59,8 +89,8 @@ const repoMetadataOverrides: Record<string, RepoMetadataOverride> = {
   }
 };
 
-const CACHE_KEY = 'githubProjectsCache_v4';
-const CACHE_TIME_KEY = 'githubProjectsTime_v4';
+const CACHE_KEY = 'githubProjectsCache_v5';
+const CACHE_TIME_KEY = 'githubProjectsTime_v5';
 
 export const useGithubProjects = () => {
   // Initialize with cached projects or fallback projects so UI renders immediately
@@ -142,7 +172,7 @@ export const useGithubProjects = () => {
           const override = repoMetadataOverrides[repo.name] || {};
           const isTeamProject = repo.owner && repo.owner.login !== 'Mostafa23';
 
-          // Generate fallback image URLs (Custom Override -> Repo banner.jpg -> Repo banner.png -> OpenGraph)
+          // Generate fallback image URLs (Custom Override -> Repo banners -> OpenGraph)
           const fallbackUrls: string[] = [];
           if (override.imageUrl) {
             fallbackUrls.push(override.imageUrl);
@@ -150,8 +180,14 @@ export const useGithubProjects = () => {
           
           const defaultBranch = repo.default_branch || 'main';
           const ownerLogin = repo.owner?.login || 'Mostafa23';
+          
+          // Try common banner locations across repositories
+          fallbackUrls.push(`https://raw.githubusercontent.com/${ownerLogin}/${repo.name}/${defaultBranch}/frontend/public/banner.jpg`);
           fallbackUrls.push(`https://raw.githubusercontent.com/${ownerLogin}/${repo.name}/${defaultBranch}/assets/banner.jpg`);
           fallbackUrls.push(`https://raw.githubusercontent.com/${ownerLogin}/${repo.name}/${defaultBranch}/assets/banner.png`);
+          fallbackUrls.push(`https://raw.githubusercontent.com/${ownerLogin}/${repo.name}/${defaultBranch}/assets/screenshot.jpg`);
+          fallbackUrls.push(`https://raw.githubusercontent.com/${ownerLogin}/${repo.name}/${defaultBranch}/images/results_chart.png`);
+          fallbackUrls.push(`https://raw.githubusercontent.com/${ownerLogin}/${repo.name}/${defaultBranch}/images/page1.png`);
           fallbackUrls.push(`https://opengraph.githubassets.com/1/${ownerLogin}/${repo.name}`);
           
           const title = override.title || repo.name.replace(/[-_]/g, ' ');
